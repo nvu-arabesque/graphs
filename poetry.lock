@@ -1,4 +1,12 @@
 [[package]]
+name = "absl-py"
+version = "1.3.0"
+description = "Abseil Python Common Libraries, see https://github.com/abseil/abseil-py."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "appnope"
 version = "0.1.3"
 description = "Disable App Nap on macOS >= 10.9"
@@ -105,27 +113,23 @@ test_extra = ["pytest (<7.1)", "pytest-asyncio", "testpath", "curio", "matplotli
 
 [[package]]
 name = "jax"
-version = "0.3.25"
+version = "0.2.22"
 description = "Differentiate, compile, and transform Numpy code."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-numpy = ">=1.20"
+absl-py = "*"
+numpy = ">=1.18"
 opt_einsum = "*"
-scipy = ">=1.5"
-typing_extensions = "*"
+scipy = ">=1.2.1"
 
 [package.extras]
-australis = ["protobuf (>=3.13,<4)"]
-ci = ["jaxlib (==0.3.24)"]
-cpu = ["jaxlib (==0.3.25)"]
-cuda = ["jaxlib (==0.3.25+cuda11.cudnn82)"]
-cuda11_cudnn805 = ["jaxlib (==0.3.25+cuda11.cudnn805)"]
-cuda11_cudnn82 = ["jaxlib (==0.3.25+cuda11.cudnn82)"]
-minimum-jaxlib = ["jaxlib (==0.3.22)"]
-tpu = ["jaxlib (==0.3.25)", "libtpu-nightly (==0.1.dev20221109)", "requests"]
+cpu = ["jaxlib (==0.1.72)"]
+cuda111 = ["jaxlib (==0.1.72+cuda111)"]
+minimum-jaxlib = ["jaxlib (==0.1.69)"]
+tpu = ["jaxlib (==0.1.72)", "libtpu-nightly (==0.1.dev20211012)", "requests"]
 
 [[package]]
 name = "jaxlib"
@@ -354,14 +358,6 @@ docs = ["myst-parser", "pydata-sphinx-theme", "sphinx"]
 test = ["pre-commit", "pytest"]
 
 [[package]]
-name = "typing-extensions"
-version = "4.4.0"
-description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "main"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
 name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
@@ -372,9 +368,10 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9.10, <3.12"
-content-hash = "4857146b86b68f6a632966148a372b0cd1db6d6975bc9f615224c6fab5907024"
+content-hash = "d0b0c461502c5be0aecfa58131c308ea211e6b4e0e306f3b547d9c7c63f01fc8"
 
 [metadata.files]
+absl-py = []
 appnope = []
 asttokens = []
 backcall = [
@@ -437,7 +434,6 @@ six = [
 ]
 stack-data = []
 traitlets = []
-typing-extensions = []
 wcwidth = [
     {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
     {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
